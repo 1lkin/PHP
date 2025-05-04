@@ -1,0 +1,23 @@
+<?php  
+function cutdur($n){
+    if($n % 2 == 0){
+        echo $n . " ededi cutdur\n"; 
+    }
+    else{
+        echo $n . " ededi tekdir\n";
+    }
+}
+function faktorial($n) {
+    $cavab = 1;
+    for ($i = 1; $i <= $n; $i++) {
+         $cavab = $cavab * $i;
+    }
+    echo $n . " ededinin faktoriali " . $cavab . " edir.";
+}
+
+$eded = 6;
+$eded2 = 4;
+
+cutdur($eded);
+faktorial($eded2);
+?> 
