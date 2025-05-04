@@ -1,0 +1,10 @@
+<?php  
+  $meyveler = array("Alma", "Armud", "Heyva", "Nar");
+
+  array_shift($meyveler); // Remove the first item
+  array_pop($meyveler); // Remove the last item
+  $meyveler[] = "Banan"; // Add one more item to the array
+  array_push($meyveler, "Alca", "Ciyelek", "Erik");// Add three item to the array
+
+var_dump($meyveler);
+?> 
