@@ -1,0 +1,25 @@
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// Elaqenin qurulmasi
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Elaqenin yoxlanilmasi
+if ($conn->connect_error) {
+  die("Elaqe alinmadi: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Veli', 'Ehmedov', 'veli@birmail.com')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Yeni melumat ugurla yaradildi";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
