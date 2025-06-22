@@ -1,0 +1,19 @@
+<?php  
+$username = $_GET['username'];
+$password = $_GET['password'];
+
+$mesaj="";
+
+$correct_username= "Siman";
+$correct_password= "88888";
+
+ 
+if ($correct_username === $username && $correct_password === $password) {
+    $mesaj = '<p>Uğurla daxil oldunuz</p>';
+}else{
+    $mesaj = '<p>İstifadəçi adı və ya şifrə səhvdir</p>';
+}
+
+echo $mesaj;
+
+?>
