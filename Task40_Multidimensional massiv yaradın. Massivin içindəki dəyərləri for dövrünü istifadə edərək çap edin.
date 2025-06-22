@@ -10,5 +10,4 @@ for ($i=0; $i < count($massiv); $i++){
         echo $massiv[$i][$j] . "\n";
     }
 }
-
 ?>
