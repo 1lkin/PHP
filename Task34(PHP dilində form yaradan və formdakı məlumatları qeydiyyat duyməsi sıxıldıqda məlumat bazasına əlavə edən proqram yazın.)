@@ -1,0 +1,26 @@
+<?php
+$ad = $_GET['ad'];
+$soyad = $_GET['soyad'];
+$şifrə = $_GET['şifrə'];
+
+$servername = "localhost";
+$username = "root";
+$password = '';
+$dbname = 'slr';
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (! $conn) {
+    die('baglanti xetasi' . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO slr_9 () VALUES (NULL,'$ad','$soyad','$şifrə')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Qeydiyyatdan uğurla keçdiniz";
+} else {
+    echo "Qeydiyyatdan keçəbilmədiniz" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+?>
