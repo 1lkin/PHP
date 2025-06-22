@@ -1,16 +1,14 @@
 <?php
 $massiv = [
-    ["alma", "armud", "banan"],
-    ["pomidor", "badımcan", "biber"],
-    ["toyuq eti", "mal eti", "balıq"]
+    ["A", "B", "C"],
+    ["D", "E", "F"],
+    ["G", "H", "I"]
 ];
 
 for ($i=0; $i < count($massiv); $i++){
-    echo "Alınacaqlar: ";
     for ($j=0; $j < count($massiv[$i]); $j++) {
-        echo $massiv[$i][$j] . " ";
+        echo $massiv[$i][$j] . "\n";
     }
-    echo "<br>";
 }
 
 ?>
