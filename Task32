@@ -46,3 +46,32 @@ if (mysqli_query($conn, $sql)) {
 }
 mysqli_close($conn);
 ?>
+
+// S.N hell
+
+<?php  
+$ad = $_GET['ad'];
+$soyad = $_GET['soyad'];
+
+$servername = "localhost";
+$username = "root";
+$password = '';
+$dbname = 'slr';
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (! $conn) {
+    die('baglanti xetasi'. mysqli_connect_error());
+}
+
+$sql = "INSERT INTO slr_7() VALUES (NULL,'$ad','$soyad')";
+
+if(mysqli_query($conn,$sql)){
+	echo "Melumat daxil olundu";
+}else{
+    echo "Melumat daxil oluna bilmedi" . mysqli_error($conn);
+}  
+
+mysqli_close($conn);
+
+
+?> 
