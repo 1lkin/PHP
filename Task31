@@ -12,6 +12,7 @@ function faktorial($n) {
     for ($i = 1; $i <= $n; $i++) {
          $cavab = $cavab * $i;
     }
+    if ($n === 0){$cavab = 1;}
     echo $n . " ededinin faktoriali " . $cavab . " edir.";
 }
 
