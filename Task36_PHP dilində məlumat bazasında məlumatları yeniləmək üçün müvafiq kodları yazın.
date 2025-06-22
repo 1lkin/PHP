@@ -1,0 +1,24 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "slr";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$id = 1;
+$yeni_ad = "Yeni Ad";
+$yeni_email = "email@gmail.com";
+$sql = "UPDATE users SET ad='$yeni_ad', email='$yeni_email' WHERE id=$id";
+if (mysqli_query($conn, $sql)) {
+    echo "Məlumat yeniləndi.";
+} else {
+    echo "Xəta: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+?>
