@@ -1,0 +1,13 @@
+<?php
+$email = $_GET['email'];
+$password = $_GET['password'];
+
+if (isset($email) && isset($password)) {
+   
+    echo "Daxil etdiyiniz email: " . $email . "<br>";
+    echo "Daxil etdiyiniz şifrə: " . $password . "<br>";
+} else {
+    echo "Form məlumatları göndərilmədi.";
+        }
+
+?>
