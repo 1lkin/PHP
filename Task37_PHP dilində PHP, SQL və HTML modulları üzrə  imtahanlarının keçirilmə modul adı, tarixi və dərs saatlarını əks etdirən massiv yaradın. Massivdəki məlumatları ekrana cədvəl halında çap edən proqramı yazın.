@@ -1,0 +1,35 @@
+<?php
+$imtahanlar = [
+    [
+        "modul" => "PHP", 
+        "tarix" => "2023-10-01", 
+        "ders_saat" => "10:00"
+    ],
+    [
+        "modul" => "SQL", 
+        "tarix" => "2023-10-02", 
+        "ders_saat" => "11:00"
+    ],
+    [
+        "modul" => "HTML", 
+        "tarix" => "2023-10-03", 
+        "ders_saat" => "12:00"
+    ]
+];
+
+echo "<table border='1' collpadding='5' cellspacing='0'>";
+echo "<tr>
+        <th>Modul</th>
+        <th>Tarix</th>
+        <th>Dərs Saatı</th>
+      </tr>";
+foreach ($imtahanlar as $imtahan) {
+    echo "<tr>
+            <td>{$imtahan['modul']}</td>
+            <td>{$imtahan['tarix']}</td>
+            <td>{$imtahan['ders_saat']}</td>
+          </tr>";
+}
+echo "</table>";
+
+?>
